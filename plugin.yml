@@ -1,0 +1,12 @@
+name: EffectEdit
+main: io.Jerry.EffectEdit.Main
+version: 1.0.1
+author: Jerry
+description: Effect Edit.
+commands:
+    EffectEdit:
+      description: Utilize the plugin
+      usage: You don't have permission
+    EE:
+      description: Utilize the plugin
+      usage: You don't have permission
