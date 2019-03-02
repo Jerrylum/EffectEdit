@@ -1,6 +1,6 @@
 name: EffectEdit
 main: io.Jerry.EffectEdit.Main
-version: 1.0.1
+version: 1.0.2
 author: Jerry
 description: Effect Edit.
 commands:
