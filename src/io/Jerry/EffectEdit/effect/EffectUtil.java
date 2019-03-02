@@ -73,9 +73,11 @@ public static final class ParticlePacket{
 		    return;
 		}
 		
+		String version_s = Bukkit.getServer().getClass().getPackage().getName().split("\.")[3];
+		version_s = version_s.split("_")[1];
+		version = Integer.parseInt(version_s);
 		try{
 		    isKcauldron = false;
-		    version = Integer.parseInt(Character.toString(ReflectionUtils.PackageType.getServerVersion().charAt(3)));
 		    if (version > 7) {
 		        enumParticle = ReflectionUtils.PackageType.MINECRAFT_SERVER.getClass("EnumParticle");
 		    }
@@ -86,7 +88,6 @@ public static final class ParticlePacket{
 		    sendPacket = ReflectionUtils.getMethod(playerConnection.getType(), "sendPacket", new Class[] { ReflectionUtils.PackageType.MINECRAFT_SERVER.getClass("Packet") });
 		}catch (Exception exception){
 		    isKcauldron = true;
-		    version = Integer.parseInt(Character.toString(ReflectionUtils.PackageType.getServerVersion().charAt(3)));
 		    Class<?> packetClass = Class.forName("net.minecraft.network.play.server.S2APacketParticles");
 		    packetConstructor = ReflectionUtils.getConstructor(packetClass, new Class[0]);
 		    getHandle = ReflectionUtils.getMethod("CraftPlayer", ReflectionUtils.PackageType.CRAFTBUKKIT_ENTITY, "getHandle", new Class[0]);
