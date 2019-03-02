@@ -95,7 +95,7 @@ public class EffectEditCommand implements CommandExecutor {
 				}
 			}
 			
-			final String script = prefix;
+			final String script = prefix;System.out.println(prefix);
 			new Thread(){
 				public void run(){
 					try{

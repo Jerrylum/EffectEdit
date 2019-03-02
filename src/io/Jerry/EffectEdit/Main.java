@@ -44,7 +44,7 @@ public class Main extends JavaPlugin implements Listener{
 		}
 		getServer().getPluginManager().registerEvents(this, this);
 		
-		I18n.run(c.getString("Lang","en_Us"));
+		I18n.run(c.getString("Lang","en_US"));
 		globals = new EffectLua();
 		
 		try {

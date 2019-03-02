@@ -5,6 +5,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 import java.util.List;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
 
@@ -73,7 +74,7 @@ public static final class ParticlePacket{
 		    return;
 		}
 		
-		String version_s = Bukkit.getServer().getClass().getPackage().getName().split("\.")[3];
+		String version_s = Bukkit.getServer().getClass().getPackage().getName().split("\\.")[3];
 		version_s = version_s.split("_")[1];
 		version = Integer.parseInt(version_s);
 		try{
